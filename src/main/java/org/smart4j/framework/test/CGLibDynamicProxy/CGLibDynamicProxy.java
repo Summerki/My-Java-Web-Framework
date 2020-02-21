@@ -1,8 +1,8 @@
 package org.smart4j.framework.test.CGLibDynamicProxy;
 
-import net.sf.cglib.Enhancer;
-import net.sf.cglib.MethodInterceptor;
-import net.sf.cglib.MethodProxy;
+import net.sf.cglib.proxy.Enhancer;
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
 
 import java.lang.reflect.Method;
 
@@ -19,7 +19,7 @@ public class CGLibDynamicProxy implements MethodInterceptor {
     }
 
     public <T> T getProxy(Class<T> cls) {
-        return (T) Enhancer.enhance(cls, this);
+        return (T) Enhancer.create(cls, this);
     }
 
     @Override
