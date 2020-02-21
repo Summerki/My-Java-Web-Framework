@@ -80,6 +80,14 @@
       <version>4.0</version>
     </dependency>
 
+    <!--CGLib-->
+    <dependency>
+      <groupId>cglib</groupId>
+      <artifactId>cglib</artifactId>
+      <version>rc2-1.0</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
